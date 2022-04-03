@@ -42,14 +42,18 @@ class _GirisEkranState extends State<GirisEkran> {
                 ),
                 TextField(
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(), hintText: "AD GİRİNİZ"),
+                      icon: Icon(Icons.account_box),
+                      border: OutlineInputBorder(),
+                      hintText: "AD GİRİNİZ"),
                   controller: t1,
                   keyboardType: TextInputType.name,
                   maxLength: 15,
                 ),
                 TextField(
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(), hintText: "SOYAD GİRİNİZ"),
+                      icon: Icon(Icons.account_box),
+                      border: OutlineInputBorder(),
+                      hintText: "SOYAD GİRİNİZ"),
                   controller: t2,
                   keyboardType: TextInputType.name,
                   maxLength: 15,

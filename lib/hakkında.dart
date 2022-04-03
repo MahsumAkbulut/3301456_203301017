@@ -22,16 +22,21 @@ class hakkinda extends StatelessWidget {
                     Navigator.pop(context);
                   },
                 ),
-                Text(
-                  'HAKKINDA',
-                  style: TextStyle(color: Colors.white),
+                SizedBox(
+                  width: 20,
+                ),
+                Expanded(
+                  child: Text(
+                    'HAKKINDA',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 SizedBox(),
               ],
             )),
         body: Center(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            child: Stack(children: [
+          Image.asset('assest/images/Hakkınada.png'),
           Text(
             "Bu uygulama Selçuk Ünüversitesi,"
             "Bilgisayar Mühendisliği 2.sınıf"

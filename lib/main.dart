@@ -13,6 +13,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        bottomNavigationBar: BottomAppBar(
+            color: Colors.deepOrange,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(),
+                Text('203301017_MAHSUM AKBULUT'),
+                SizedBox(),
+              ],
+            ),
+            notchMargin: 30),
         backgroundColor: Colors.yellow,
         appBar: AppBar(
           backgroundColor: Colors.amber,

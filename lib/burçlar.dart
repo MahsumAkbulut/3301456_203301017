@@ -23,46 +23,52 @@ class _KocState extends State<Koc> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.purple,
-        appBar: AppBar(
-            backgroundColor: Colors.black54,
-            title: Center(
-                child: Text(
-              'KOÇ',
-              style: TextStyle(color: Colors.white),
-            ))),
-        body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Image.asset('assest/images/koç.png'),
-              SizedBox(height: 50),
-              FlatButton(
-                  color: Colors.yellow,
-                  highlightColor: Colors.red,
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  child: Container(child: Text('BAŞKA BİLGİ GETİR'))),
-              RaisedButton(
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.purple,
+          appBar: AppBar(
+              backgroundColor: Colors.black54,
+              title: Center(
                   child: Text(
-                    'Geri Dön',
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              SizedBox(height: 20),
-              Text(
-                kocbilgi[Random().nextInt(11)],
-                style: TextStyle(
-                    fontSize: 20,
-                    backgroundColor: Colors.black,
-                    color: Colors.lime),
-              )
-            ])),
+                'KOÇ',
+                style: TextStyle(color: Colors.white, fontSize: 50),
+              ))),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                Image.asset('assest/images/koç.png'),
+                SizedBox(height: 50),
+                FlatButton(
+                    color: Colors.yellow,
+                    highlightColor: Colors.red,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: Container(
+                      child: Text('BAŞKA BİLGİ GETİR'),
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                    )),
+                RaisedButton(
+                    child: Text(
+                      'Geri Dön',
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+                SizedBox(height: 20),
+                Text(
+                  kocbilgi[Random().nextInt(11)],
+                  style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      color: Colors.lime),
+                )
+              ])),
+        ),
       ),
     );
   }
@@ -74,7 +80,7 @@ class Oglak extends StatefulWidget {
 }
 
 class _OglakState extends State<Oglak> {
-  List<String> kocbilgi = [
+  List<String> oglakbilgi = [
     'Geleceği ayrıntılı biçimde planlamaya çalışan Oğlaklar bu özellikleri nedeniyle sık sık kuruntulara kapılarak, depresyona girerler.',
     'İşleri ile aşırı meşgul olduklarından, insanlarla zor ilişki kurarlar.',
     'Hiçbir zaman kendilerini yalnız hissetmezle',
@@ -84,46 +90,52 @@ class _OglakState extends State<Oglak> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.green,
-        appBar: AppBar(
-            backgroundColor: Colors.black54,
-            title: Center(
-                child: Text(
-              'OĞLAK',
-              style: TextStyle(color: Colors.white),
-            ))),
-        body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Image.asset('assest/images/oğlak.png'),
-              SizedBox(height: 50),
-              FlatButton(
-                  color: Colors.yellow,
-                  highlightColor: Colors.red,
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  child: Container(child: Text('BAŞKA BİLGİ GETİR'))),
-              RaisedButton(
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.green,
+          appBar: AppBar(
+              backgroundColor: Colors.black54,
+              title: Center(
                   child: Text(
-                    'Geri Dön',
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              SizedBox(height: 20),
-              Text(
-                kocbilgi[Random().nextInt(6)],
-                style: TextStyle(
-                    fontSize: 20,
-                    backgroundColor: Colors.black,
-                    color: Colors.lime),
-              )
-            ])),
+                'OĞLAK',
+                style: TextStyle(color: Colors.white, fontSize: 50),
+              ))),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                Image.asset('assest/images/oğlak.png'),
+                SizedBox(height: 50),
+                FlatButton(
+                    color: Colors.yellow,
+                    highlightColor: Colors.red,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: Container(
+                      child: Text('BAŞKA BİLGİ GETİR'),
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                    )),
+                RaisedButton(
+                    child: Text(
+                      'Geri Dön',
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+                SizedBox(height: 20),
+                Text(
+                  oglakbilgi[Random().nextInt(6)],
+                  style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      color: Colors.lime),
+                )
+              ])),
+        ),
       ),
     );
   }
@@ -146,46 +158,52 @@ class _TeraziState extends State<Terazi> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.greenAccent,
-        appBar: AppBar(
-            backgroundColor: Colors.black54,
-            title: Center(
-                child: Text(
-              'TERAZİ',
-              style: TextStyle(color: Colors.white),
-            ))),
-        body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Image.asset('assest/images/terazi.png'),
-              SizedBox(height: 50),
-              FlatButton(
-                  color: Colors.yellow,
-                  highlightColor: Colors.red,
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  child: Container(child: Text('BAŞKA BİLGİ GETİR'))),
-              RaisedButton(
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.greenAccent,
+          appBar: AppBar(
+              backgroundColor: Colors.black54,
+              title: Center(
                   child: Text(
-                    'Geri Dön',
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              SizedBox(height: 20),
-              Text(
-                terazibilgi[Random().nextInt(7)],
-                style: TextStyle(
-                    fontSize: 20,
-                    backgroundColor: Colors.black,
-                    color: Colors.lime),
-              )
-            ])),
+                'TERAZİ',
+                style: TextStyle(color: Colors.white, fontSize: 50),
+              ))),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                Image.asset('assest/images/terazi.png'),
+                SizedBox(height: 50),
+                FlatButton(
+                    color: Colors.yellow,
+                    highlightColor: Colors.red,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: Container(
+                      child: Text('BAŞKA BİLGİ GETİR'),
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                    )),
+                RaisedButton(
+                    child: Text(
+                      'Geri Dön',
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+                SizedBox(height: 20),
+                Text(
+                  terazibilgi[Random().nextInt(7)],
+                  style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      color: Colors.lime),
+                )
+              ])),
+        ),
       ),
     );
   }
@@ -207,46 +225,52 @@ class _YayState extends State<Yay> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.blue,
-        appBar: AppBar(
-            backgroundColor: Colors.black54,
-            title: Center(
-                child: Text(
-              'YAY',
-              style: TextStyle(color: Colors.white),
-            ))),
-        body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Image.asset('assest/images/yay.png'),
-              SizedBox(height: 50),
-              FlatButton(
-                  color: Colors.yellow,
-                  highlightColor: Colors.red,
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  child: Container(child: Text('BAŞKA BİLGİ GETİR'))),
-              RaisedButton(
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.blue,
+          appBar: AppBar(
+              backgroundColor: Colors.black54,
+              title: Center(
                   child: Text(
-                    'Geri Dön',
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              SizedBox(height: 20),
-              Text(
-                yaybilgi[Random().nextInt(6)],
-                style: TextStyle(
-                    fontSize: 20,
-                    backgroundColor: Colors.black,
-                    color: Colors.lime),
-              )
-            ])),
+                'YAY',
+                style: TextStyle(color: Colors.white, fontSize: 50),
+              ))),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                Image.asset('assest/images/yay.png'),
+                SizedBox(height: 50),
+                FlatButton(
+                    color: Colors.yellow,
+                    highlightColor: Colors.red,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: Container(
+                      child: Text('BAŞKA BİLGİ GETİR'),
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                    )),
+                RaisedButton(
+                    child: Text(
+                      'Geri Dön',
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+                SizedBox(height: 20),
+                Text(
+                  yaybilgi[Random().nextInt(6)],
+                  style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      color: Colors.lime),
+                )
+              ])),
+        ),
       ),
     );
   }
@@ -270,46 +294,52 @@ class _YengecState extends State<Yengec> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.red,
-        appBar: AppBar(
-            backgroundColor: Colors.black54,
-            title: Center(
-                child: Text(
-              'YENGEÇ',
-              style: TextStyle(color: Colors.white),
-            ))),
-        body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Image.asset('assest/images/yengeç.png'),
-              SizedBox(height: 50),
-              FlatButton(
-                  color: Colors.yellow,
-                  highlightColor: Colors.red,
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  child: Container(child: Text('BAŞKA BİLGİ GETİR'))),
-              RaisedButton(
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.red,
+          appBar: AppBar(
+              backgroundColor: Colors.black54,
+              title: Center(
                   child: Text(
-                    'Geri Dön',
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              SizedBox(height: 20),
-              Text(
-                yengecbilgi[Random().nextInt(8)],
-                style: TextStyle(
-                    fontSize: 20,
-                    backgroundColor: Colors.black,
-                    color: Colors.lime),
-              )
-            ])),
+                'YENGEÇ',
+                style: TextStyle(color: Colors.white, fontSize: 50),
+              ))),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                Image.asset('assest/images/yengeç.png'),
+                SizedBox(height: 50),
+                FlatButton(
+                    color: Colors.yellow,
+                    highlightColor: Colors.red,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: Container(
+                      child: Text('BAŞKA BİLGİ GETİR'),
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                    )),
+                RaisedButton(
+                    child: Text(
+                      'Geri Dön',
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+                SizedBox(height: 20),
+                Text(
+                  yengecbilgi[Random().nextInt(8)],
+                  style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      color: Colors.lime),
+                )
+              ])),
+        ),
       ),
     );
   }
@@ -331,46 +361,52 @@ class _KovaState extends State<Kova> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.grey,
-        appBar: AppBar(
-            backgroundColor: Colors.black54,
-            title: Center(
-                child: Text(
-              'KOVA',
-              style: TextStyle(color: Colors.white),
-            ))),
-        body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Image.asset('assest/images/kova.png'),
-              SizedBox(height: 50),
-              FlatButton(
-                  color: Colors.yellow,
-                  highlightColor: Colors.red,
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  child: Container(child: Text('BAŞKA BİLGİ GETİR'))),
-              RaisedButton(
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.grey,
+          appBar: AppBar(
+              backgroundColor: Colors.black54,
+              title: Center(
                   child: Text(
-                    'Geri Dön',
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              SizedBox(height: 20),
-              Text(
-                kovabilgi[Random().nextInt(6)],
-                style: TextStyle(
-                    fontSize: 20,
-                    backgroundColor: Colors.black,
-                    color: Colors.lime),
-              )
-            ])),
+                'KOVA',
+                style: TextStyle(color: Colors.white, fontSize: 50),
+              ))),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                Image.asset('assest/images/kova.png'),
+                SizedBox(height: 50),
+                FlatButton(
+                    color: Colors.yellow,
+                    highlightColor: Colors.red,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: Container(
+                      child: Text('BAŞKA BİLGİ GETİR'),
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                    )),
+                RaisedButton(
+                    child: Text(
+                      'Geri Dön',
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+                SizedBox(height: 20),
+                Text(
+                  kovabilgi[Random().nextInt(6)],
+                  style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      color: Colors.lime),
+                )
+              ])),
+        ),
       ),
     );
   }
@@ -394,46 +430,52 @@ class _IkizlerState extends State<Ikizler> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.cyan,
-        appBar: AppBar(
-            backgroundColor: Colors.black54,
-            title: Center(
-                child: Text(
-              'İKİZLER',
-              style: TextStyle(color: Colors.white),
-            ))),
-        body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Image.asset('assest/images/ikizler.png'),
-              SizedBox(height: 50),
-              FlatButton(
-                  color: Colors.yellow,
-                  highlightColor: Colors.red,
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  child: Container(child: Text('BAŞKA BİLGİ GETİR'))),
-              RaisedButton(
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.cyan,
+          appBar: AppBar(
+              backgroundColor: Colors.black54,
+              title: Center(
                   child: Text(
-                    'Geri Dön',
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              SizedBox(height: 20),
-              Text(
-                ikizlerbilgi[Random().nextInt(8)],
-                style: TextStyle(
-                    fontSize: 20,
-                    backgroundColor: Colors.black,
-                    color: Colors.lime),
-              )
-            ])),
+                'İKİZLER',
+                style: TextStyle(color: Colors.white, fontSize: 50),
+              ))),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                Image.asset('assest/images/ikizler.png'),
+                SizedBox(height: 50),
+                FlatButton(
+                    color: Colors.yellow,
+                    highlightColor: Colors.red,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: Container(
+                      child: Text('BAŞKA BİLGİ GETİR'),
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                    )),
+                RaisedButton(
+                    child: Text(
+                      'Geri Dön',
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+                SizedBox(height: 20),
+                Text(
+                  ikizlerbilgi[Random().nextInt(8)],
+                  style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      color: Colors.lime),
+                )
+              ])),
+        ),
       ),
     );
   }
@@ -455,46 +497,52 @@ class _BogaState extends State<Boga> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.red,
-        appBar: AppBar(
-            backgroundColor: Colors.black54,
-            title: Center(
-                child: Text(
-              'BOĞA',
-              style: TextStyle(color: Colors.white),
-            ))),
-        body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Image.asset('assest/images/boğa.png'),
-              SizedBox(height: 50),
-              FlatButton(
-                  color: Colors.yellow,
-                  highlightColor: Colors.red,
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  child: Container(child: Text('BAŞKA BİLGİ GETİR'))),
-              RaisedButton(
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.red,
+          appBar: AppBar(
+              backgroundColor: Colors.black54,
+              title: Center(
                   child: Text(
-                    'Geri Dön',
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              SizedBox(height: 20),
-              Text(
-                bogabilgi[Random().nextInt(6)],
-                style: TextStyle(
-                    fontSize: 20,
-                    backgroundColor: Colors.black,
-                    color: Colors.lime),
-              )
-            ])),
+                'BOĞA',
+                style: TextStyle(color: Colors.white, fontSize: 50),
+              ))),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                Image.asset('assest/images/boğa.png'),
+                SizedBox(height: 50),
+                FlatButton(
+                    color: Colors.yellow,
+                    highlightColor: Colors.red,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: Container(
+                      child: Text('BAŞKA BİLGİ GETİR'),
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                    )),
+                RaisedButton(
+                    child: Text(
+                      'Geri Dön',
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+                SizedBox(height: 20),
+                Text(
+                  bogabilgi[Random().nextInt(6)],
+                  style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      color: Colors.lime),
+                )
+              ])),
+        ),
       ),
     );
   }
@@ -520,46 +568,52 @@ class _BasakState extends State<Basak> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.brown,
-        appBar: AppBar(
-            backgroundColor: Colors.black54,
-            title: Center(
-                child: Text(
-              'BAŞAK',
-              style: TextStyle(color: Colors.white),
-            ))),
-        body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Image.asset('assest/images/başak.png'),
-              SizedBox(height: 50),
-              FlatButton(
-                  color: Colors.yellow,
-                  highlightColor: Colors.red,
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  child: Container(child: Text('BAŞKA BİLGİ GETİR'))),
-              RaisedButton(
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.brown,
+          appBar: AppBar(
+              backgroundColor: Colors.black54,
+              title: Center(
                   child: Text(
-                    'Geri Dön',
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              SizedBox(height: 20),
-              Text(
-                basakbilgi[Random().nextInt(10)],
-                style: TextStyle(
-                    fontSize: 20,
-                    backgroundColor: Colors.black,
-                    color: Colors.lime),
-              )
-            ])),
+                'BAŞAK',
+                style: TextStyle(color: Colors.white, fontSize: 50),
+              ))),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                Image.asset('assest/images/başak.png'),
+                SizedBox(height: 50),
+                FlatButton(
+                    color: Colors.yellow,
+                    highlightColor: Colors.red,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: Container(
+                      child: Text('BAŞKA BİLGİ GETİR'),
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                    )),
+                RaisedButton(
+                    child: Text(
+                      'Geri Dön',
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+                SizedBox(height: 20),
+                Text(
+                  basakbilgi[Random().nextInt(10)],
+                  style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      color: Colors.lime),
+                )
+              ])),
+        ),
       ),
     );
   }
@@ -583,46 +637,52 @@ class _BalikState extends State<Balik> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.lightBlueAccent,
-        appBar: AppBar(
-            backgroundColor: Colors.black54,
-            title: Center(
-                child: Text(
-              'BALIK',
-              style: TextStyle(color: Colors.white),
-            ))),
-        body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Image.asset('assest/images/balık.png'),
-              SizedBox(height: 50),
-              FlatButton(
-                  color: Colors.yellow,
-                  highlightColor: Colors.red,
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  child: Container(child: Text('BAŞKA BİLGİ GETİR'))),
-              RaisedButton(
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.lightBlueAccent,
+          appBar: AppBar(
+              backgroundColor: Colors.black54,
+              title: Center(
                   child: Text(
-                    'Geri Dön',
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              SizedBox(height: 20),
-              Text(
-                balikbilgi[Random().nextInt(8)],
-                style: TextStyle(
-                    fontSize: 20,
-                    backgroundColor: Colors.black,
-                    color: Colors.lime),
-              )
-            ])),
+                'BALIK',
+                style: TextStyle(color: Colors.white, fontSize: 50),
+              ))),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                Image.asset('assest/images/balık.png'),
+                SizedBox(height: 50),
+                FlatButton(
+                    color: Colors.yellow,
+                    highlightColor: Colors.red,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: Container(
+                      child: Text('BAŞKA BİLGİ GETİR'),
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                    )),
+                RaisedButton(
+                    child: Text(
+                      'Geri Dön',
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+                SizedBox(height: 20),
+                Text(
+                  balikbilgi[Random().nextInt(8)],
+                  style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      color: Colors.lime),
+                )
+              ])),
+        ),
       ),
     );
   }
@@ -644,46 +704,52 @@ class _AslanState extends State<Aslan> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.amber,
-        appBar: AppBar(
-            backgroundColor: Colors.black54,
-            title: Center(
-                child: Text(
-              'ASLAN',
-              style: TextStyle(color: Colors.white),
-            ))),
-        body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Image.asset('assest/images/aslan.png'),
-              SizedBox(height: 50),
-              FlatButton(
-                  color: Colors.yellow,
-                  highlightColor: Colors.red,
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  child: Container(child: Text('BAŞKA BİLGİ GETİR'))),
-              RaisedButton(
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.amber,
+          appBar: AppBar(
+              backgroundColor: Colors.black54,
+              title: Center(
                   child: Text(
-                    'Geri Dön',
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              SizedBox(height: 20),
-              Text(
-                aslanbilgi[Random().nextInt(6)],
-                style: TextStyle(
-                    fontSize: 20,
-                    backgroundColor: Colors.black,
-                    color: Colors.lime),
-              )
-            ])),
+                'ASLAN',
+                style: TextStyle(color: Colors.white, fontSize: 50),
+              ))),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                Image.asset('assest/images/aslan.png'),
+                SizedBox(height: 50),
+                FlatButton(
+                    color: Colors.yellow,
+                    highlightColor: Colors.red,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: Container(
+                      child: Text('BAŞKA BİLGİ GETİR'),
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                    )),
+                RaisedButton(
+                    child: Text(
+                      'Geri Dön',
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+                SizedBox(height: 20),
+                Text(
+                  aslanbilgi[Random().nextInt(6)],
+                  style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      color: Colors.lime),
+                )
+              ])),
+        ),
       ),
     );
   }
@@ -707,46 +773,52 @@ class _AkrepState extends State<Akrep> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.pink,
-        appBar: AppBar(
-            backgroundColor: Colors.black54,
-            title: Center(
-                child: Text(
-              'AKREP',
-              style: TextStyle(color: Colors.white),
-            ))),
-        body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-              Image.asset('assest/images/akrep.png'),
-              SizedBox(height: 50),
-              FlatButton(
-                  color: Colors.yellow,
-                  highlightColor: Colors.red,
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  child: Container(child: Text('BAŞKA BİLGİ GETİR'))),
-              RaisedButton(
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Colors.pink,
+          appBar: AppBar(
+              backgroundColor: Colors.black54,
+              title: Center(
                   child: Text(
-                    'Geri Dön',
-                  ),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
-              SizedBox(height: 20),
-              Text(
-                akrepbilgi[Random().nextInt(8)],
-                style: TextStyle(
-                    fontSize: 20,
-                    backgroundColor: Colors.black,
-                    color: Colors.lime),
-              )
-            ])),
+                'AKREP',
+                style: TextStyle(color: Colors.white, fontSize: 50),
+              ))),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                Image.asset('assest/images/akrep.png'),
+                SizedBox(height: 50),
+                FlatButton(
+                    color: Colors.yellow,
+                    highlightColor: Colors.red,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: Container(
+                      child: Text('BAŞKA BİLGİ GETİR'),
+                      padding: EdgeInsets.all(20),
+                      margin: EdgeInsets.all(10),
+                    )),
+                RaisedButton(
+                    child: Text(
+                      'Geri Dön',
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    }),
+                SizedBox(height: 20),
+                Text(
+                  akrepbilgi[Random().nextInt(8)],
+                  style: TextStyle(
+                      fontSize: 20,
+                      backgroundColor: Colors.black,
+                      color: Colors.lime),
+                )
+              ])),
+        ),
       ),
     );
   }
